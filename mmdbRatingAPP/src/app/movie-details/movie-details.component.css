@@ -1,0 +1,9 @@
+.navbar{
+    background-color: dodgerblue;
+    margin-bottom: 50px;
+}
+
+.card{
+    border-radius: 0%;
+    border: 0px;
+}

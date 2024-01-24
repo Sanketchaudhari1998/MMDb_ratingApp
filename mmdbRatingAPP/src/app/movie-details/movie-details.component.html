@@ -1,0 +1,43 @@
+<nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand">MMDb</a>
+      <form class="d-flex" role="search">
+        <input
+          id="input"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search..."
+          aria-label="Search"
+        />
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 card">
+            <img src="https://www.themoviedb.org/t/p/w1280{{movieDetails.poster_path}}" alt="">
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">{{ movieDetails.title }}</h5>
+                  <span class="card-text mt-3">{{movieDetails.status}} |<span class="ms-4 ">{{movieDetails.runtime}}m</span> | <span
+                      class="ms-4">{{movieDetails.vote_average}}B</span></span>
+                  <p class="card-text mt-3">{{ movieDetails.overview }}</p>
+        
+                  <h6>Other Details:</h6>
+        
+                  <h6 class="mt-4">Language:</h6>
+                  <p class="card-text ">en</p>
+                  <h6 class="mt-4">Budget:</h6>
+                  <p class="card-text ">${{ movieDetails.budget }}</p>
+                  <h6 class="mt-4">Revenue:</h6>
+                  <p class="card-text">${{ movieDetails.revenue }}</p>
+                </div>
+                <a routerLink="/homePage"><button class="btn btn-success w-25">Go back</button></a>
+              </div>
+        </div>
+    </div>
+  </div>

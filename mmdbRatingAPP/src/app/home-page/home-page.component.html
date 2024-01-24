@@ -1,0 +1,49 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand">MMDb</a>
+    <form class="d-flex" role="search">
+      <input
+        id="input" #movieSearch class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"/>
+      <button class="btn btn-success" type="submit" (click)="onSubmit(movieSearch.value)">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row" *ngIf="!toggle">
+    <div class="col-md-3 col-sm-3 " *ngFor="let movie of movies">
+      <div class="card" style="width: 14rem">
+        <img
+        (click)="movieDetails(movie.id)"
+          src='https://www.themoviedb.org/t/p/w1280{{movie.poster_path}}'
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="">{{ movie.title }} ({{ movie.vote_average }})</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+ 
+  <div class="row" *ngIf="toggle">
+    <div class="col-md-3 col-sm-3 " *ngFor="let movie of filterData">
+      <div class="card" style="width: 14rem">
+        <img
+        (click)="movieDetails(movie.id)"
+          src='https://www.themoviedb.org/t/p/w1280{{movie.poster_path}}'
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="">{{ movie.title }} ({{ movie.vote_average }})</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
