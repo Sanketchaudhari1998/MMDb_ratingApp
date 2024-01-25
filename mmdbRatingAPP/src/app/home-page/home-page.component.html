@@ -8,17 +8,17 @@
     </form>
   </div>
 </nav>
-<div class="container-fluid">
-  <div class="row" *ngIf="!toggle">
+<div class="container-fluid ">
+  <div class="row " *ngIf="!toggle">
     <div class="col-md-3 col-sm-3 " *ngFor="let movie of movies">
-      <div class="card" style="width: 14rem">
+      <div class="card" style="width: 18rem">
         <img
         (click)="movieDetails(movie.id)"
           src='https://www.themoviedb.org/t/p/w1280{{movie.poster_path}}'
-          class="card-img-top"
+          class="card-img-top ps-xxl-5 "
           alt="..."
         />
-        <div class="card-body">
+        <div class="card-body ps-xxl-5 ">
           <h5 class="">{{ movie.title }} ({{ movie.vote_average }})</h5>
         </div>
       </div>
@@ -31,14 +31,14 @@
  
   <div class="row" *ngIf="toggle">
     <div class="col-md-3 col-sm-3 " *ngFor="let movie of filterData">
-      <div class="card" style="width: 14rem">
+      <div class="card" style="width: 18rem">
         <img
         (click)="movieDetails(movie.id)"
           src='https://www.themoviedb.org/t/p/w1280{{movie.poster_path}}'
-          class="card-img-top"
+          class="card-img-top ps-xxl-5 "
           alt="..."
         />
-        <div class="card-body">
+        <div class="card-body ps-xxl-5 ">
           <h5 class="">{{ movie.title }} ({{ movie.vote_average }})</h5>
         </div>
       </div>

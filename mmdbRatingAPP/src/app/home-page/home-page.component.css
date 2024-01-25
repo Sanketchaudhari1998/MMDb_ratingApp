@@ -1,11 +1,13 @@
 .navbar{
     background-color: dodgerblue;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .card{
     border-radius: 0%;
     border: 0px;
+    
+    
 }
 
 /* input{
